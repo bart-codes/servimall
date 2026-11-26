@@ -1,0 +1,14 @@
+{
+  "name": "services-mall",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["apps/api", "apps/web"],
+  "scripts": {
+    "dev:api": "npm run dev -w @mall/api",
+    "dev:web": "npm run dev -w @mall/web",
+    "build": "npm run build -w @mall/api && npm run build -w @mall/web",
+    "test": "npm run test -w @mall/api",
+    "typecheck": "npm run typecheck -w @mall/api && npm run typecheck -w @mall/web",
+    "seed": "npm run seed -w @mall/api"
+  }
+}

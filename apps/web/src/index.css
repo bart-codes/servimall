@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-paper font-body text-ink antialiased; }
+  h1, h2, h3 { @apply font-display tracking-tight; }
+  a, button, input, select, textarea { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lake focus-visible:ring-offset-2 focus-visible:ring-offset-paper; }
+}
+
+@layer components {
+  .input { @apply w-full rounded-md border border-mist bg-white px-3 py-2 text-base placeholder:text-ink/40; }
+  .btn { @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-primary { @apply btn bg-lake text-white hover:bg-lake-dark; }
+  .btn-sun { @apply btn bg-sun text-ink hover:brightness-95; }
+  .btn-ghost { @apply btn border border-mist bg-white text-ink hover:bg-lake-soft; }
+  .btn-danger { @apply btn border border-brick/40 bg-white text-brick hover:bg-brick/5; }
+  .card { @apply rounded-lg border border-mist bg-white p-4; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
